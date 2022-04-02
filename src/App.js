@@ -4,17 +4,7 @@ import Navbar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
 
-const books = [
-  {
-    id: 1,
-    genre: 'genre',
-    title: 'title',
-    author: 'author',
-    chapter: 'React redux',
-  },
-];
-
-function App() {
+function App({ books }) {
   return (
     <div>
       <Navbar />
