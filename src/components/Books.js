@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Book from './Book';
 import AddBook from './AddBook';
+import Book from './Book';
 
 function Books() {
   const books = [
@@ -23,9 +22,5 @@ function Books() {
     </>
   );
 }
-
-Books.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-};
 
 export default Books;

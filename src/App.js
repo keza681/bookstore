@@ -1,10 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Navbar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
 
-function App({ books }) {
+function App(books) {
   return (
     <div>
       <Navbar />
@@ -15,5 +16,9 @@ function App({ books }) {
     </div>
   );
 }
+
+Books.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
 
 export default App;
