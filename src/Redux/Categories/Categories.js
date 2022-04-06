@@ -1,4 +1,4 @@
-const BOOK_STATUS = 'bookStore/Categories/BOOK_STATUS';
+const BOOK_STATUS = 'BOOK_STATUS';
 
 export const checkStatus = (status) => ({ type: BOOK_STATUS, payload: status });
 
