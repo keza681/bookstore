@@ -1,6 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import dispatchToProps from './Redux/States/dispatchToProps';
+import stateToProps from './Redux/States/addToState';
 import Navbar from './components/NavBar';
 import Books from './components/Books';
 import Categories from './components/Categories';
@@ -21,4 +24,4 @@ Books.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-export default App;
+export default connect(stateToProps, dispatchToProps)(App);
