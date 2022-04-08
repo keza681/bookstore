@@ -1,10 +1,15 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../Redux/Books/Books';
+import { removeBook, getItems } from '../Redux/Books/Books';
 
 function Book({ book }) {
   const dispatch = useDispatch();
+
+  const rmvBk = (e) => {
+    dispatch(removeBook(e.target.value));
+    dispatch(getItems());
+  };
   return (
     <>
       <div className="bookCard">
@@ -15,7 +20,7 @@ function Book({ book }) {
           <p className="chapter">{book.chapter}</p>
           <ul>
             <li><button type="button">Comments</button></li>
-            <li><button type="button" onClick={() => dispatch(removeBook(book.id))}>Remove</button></li>
+            <li><button type="button" value={book.id} onClick={rmvBk}>Remove</button></li>
             <li><button type="button">Edit</button></li>
           </ul>
         </div>
