@@ -14,7 +14,11 @@ A React web app in which user can add, update and delete book. This is being don
 ## Getting Started
  Cloning the project: In your computer, go in the terminal and type
 ```
-git clone git@github.com:keza681/bookstore.git 
+- git clone git@github.com:keza681/bookstore.git 
+- Open VSCode 
+- Open The Project
+- Then Run npm instal
+- After run npm start to see the project in the browser
 ```
 
 ## Authors
