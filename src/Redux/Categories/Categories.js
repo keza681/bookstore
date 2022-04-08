@@ -1,15 +1,16 @@
 const BOOK_STATUS = 'BOOK_STATUS';
 
-export const checkStatus = (status) => ({ type: BOOK_STATUS, payload: status });
+export function checkStatus(id) {
+  return {
+    type: BOOK_STATUS,
+    payload: { id },
+  };
+}
 
-const initialState = {
-  categories: [],
-};
-
-const categoriesReducer = (state = initialState, action = {}) => {
+const categoriesReducer = (state = [], action = {}) => {
   switch (action.type) {
     case BOOK_STATUS:
-      return { ...state, status: 'Under construction' };
+      return 'Under construction';
     default:
       return state;
   }
