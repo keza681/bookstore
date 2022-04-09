@@ -10,7 +10,7 @@ nav {
   justify-content: space-between;
   position: relative;
   align-items: center;
-  font-family: 'Roboto Mono', monospace;;
+  font-family: 'Roboto Mono', monospace;
   padding: 1% 5%;
   background-color: #fff;
   width: 90%;
@@ -111,7 +111,6 @@ ul {
   margin-right: 10%;
 }
 
-/* Circular Progress Bar */
 .circle-wrap {
   width: 75px;
   height: 75px;
@@ -169,7 +168,6 @@ ul {
   font-size: 2em;
 }
 
-/* end of Circular Progress Bar */
 .percentages {
   display: flex;
   flex-direction: column;
@@ -209,7 +207,7 @@ ul {
 
 .CardForm {
   padding: 5%;
-  font-family: 'Roboto Mono', monospace;;
+  font-family: 'Roboto Mono', monospace;
 }
 
 form input {
