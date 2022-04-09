@@ -23,8 +23,8 @@ function AddBook() {
     setCategory('');
   };
   return (
-    <>
-      <h3>ADD BOOK HERE</h3>
+    <div className="CardForm">
+      <h3>ADD NEW BOOK</h3>
       <form onSubmit={addToStore}>
         <input type="text" placeholder="title of the book" value={title} onChange={(e) => setTitle(e.target.value)} required />
         <input type="text" placeholder="author name" value={author} onChange={(e) => setAuthor(e.target.value)} required />
@@ -38,7 +38,7 @@ function AddBook() {
         </select>
         <button type="submit">Enter New Book</button>
       </form>
-    </>
+    </div>
   );
 }
 
