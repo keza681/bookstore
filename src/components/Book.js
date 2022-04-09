@@ -12,28 +12,39 @@ function Book({ book }) {
   };
   return (
     <>
-      <div className="bookCard">
+      <div className="form">
         <div className="bookInfo">
           <p className="genre">{book.genre}</p>
           <p className="title">{book.title}</p>
           <p className="author">{book.author}</p>
           <p className="chapter">{book.chapter}</p>
-          <ul>
-            <li><button type="button">Comments</button></li>
-            <li><button type="button" value={book.id} onClick={rmvBk}>Remove</button></li>
-            <li><button type="button">Edit</button></li>
+          <ul className="btns">
+            <li><button type="button" className="btn">Comments</button></li>
+            <li><button type="button" className="btn" value={book.id} onClick={rmvBk}>Remove</button></li>
+            <li><button type="button" className="btn">Edit</button></li>
           </ul>
         </div>
         <div className="progress">
-          <div>
-            <div>chart</div>
-            <p>percentage</p>
+          <div className="chart">
+            <div className="ProgressBar">
+              <div className="circle-wrap">
+                <div className="circle">
+                  <div className="mask half">
+                    <div className="fill" />
+                  </div>
+                  <div className="inside-circle" />
+                </div>
+              </div>
+            </div>
+            <div className="percentages">
+              <h2>7%</h2>
+              <p className="status">Completed</p>
+            </div>
           </div>
-          <div>
-            <p>{book.status}</p>
-            <p>{book.currentChapter}</p>
-            <p>{book.chapterNumber}</p>
-            <button type="button">Update progress</button>
+          <div className="rightSection">
+            <p className="status">currentChapter</p>
+            <p>chapter 4</p>
+            <button className="bookButton" type="button">Update progress</button>
           </div>
         </div>
       </div>
